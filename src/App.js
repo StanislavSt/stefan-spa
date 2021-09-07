@@ -1,11 +1,11 @@
 import { useState } from "react";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 import "./App.css";
 import miscibleVideo from "./video/miscible.mp4";
@@ -54,7 +54,7 @@ function App() {
           onMouseOver={() => setLogo(logoGradient)}
           onMouseLeave={() => setLogo(logoGrey)}
         >
-          <img src={logo}></img>
+          <img alt="logo" src={logo}></img>
         </div>
         <div className="shop">
           SHOP

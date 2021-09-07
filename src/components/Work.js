@@ -18,7 +18,7 @@ export const Work = ({ img, images, header, content, location, video }) => {
           muted
         />
       ) : null}
-      {img ? <img alt="miscible" src={img} objectFit></img> : null}
+      {img ? <img alt="miscible" src={img}></img> : null}
       {images ? (
         <div className="swip-container">
           <Swiper
@@ -28,8 +28,8 @@ export const Work = ({ img, images, header, content, location, video }) => {
             onSlideChange={() => console.log('slide change')}
           >
             {images.map((i, index) => (
-              <SwiperSlide>
-                <img key={index} src={i}></img>
+              <SwiperSlide key={index}>
+                <img alt="swiper-img" src={i}></img>
               </SwiperSlide>
             ))}
           </Swiper>{" "}
