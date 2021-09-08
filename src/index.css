@@ -23,8 +23,12 @@ img {
   font-size: 1.8vw;
   cursor: pointer;
 }
-.shop:hover{
+.shop:hover {
   opacity: 0.5;
+}
+a {
+  color: black;
+  text-decoration: none;
 }
 
 .swip-container {

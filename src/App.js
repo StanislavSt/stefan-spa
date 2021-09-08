@@ -1,11 +1,11 @@
 import { useState } from "react";
 import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 import "./App.css";
 import miscibleVideo from "./video/miscible.mp4";
@@ -48,78 +48,94 @@ function App() {
 
   return (
     <div className="App">
-      <div className="left">
-        <div
-          className="logo"
-          onMouseOver={() => setLogo(logoGradient)}
-          onMouseLeave={() => setLogo(logoGrey)}
-        >
-          <img alt="logo" src={logo}></img>
-        </div>
-        <div className="shop">
-          SHOP
-        </div>
-      </div>
-      <div className="middle">
-        <Work
-          video={selective}
-          header="Selective Memory"
-          content="Part of group show « Casting the Runes » curated by Arthur Poujois"
-          location="2021 - London, United Kingdom"
-        />
-        <Work
-          images={[rest, rest1, rest2, rest3, rest4, rest5, rest6]}
-          header="Rest"
-          content="Print design and production development for Michele Rizzo"
-          location="2020 - Rome, Italy"
-        />
-        <Work
-          images={[luxus6, luxus1, luxus2, luxus3, luxus4, luxus5]}
-          header="Luxus für Alle "
-          content="Print design and development for Annemarie Šarić"
-          location="2020 - Antwerp, Belgium"
-        />
-        <Work
-          images={[heels1, heels2, heels3]}
-          header="DYSMORPHIA Heels"
-          content="Design development and production follow up for ROMBAUT"
-          location="2019 - Paris, France"
-        />
-        <Work
-          img={miscible}
-          header="Ambivalence"
-          content="Visuals on holographic display: Sam Rolfes"
-          location="2018 - Antwerp, Belgium"
-        />
-        <Work
-          images={[
-            ambivalence,
-            ambivalence1,
-            ambivalence2,
-            ambivalence3,
-            ambivalence4,
-            ambivalence5,
-          ]}
-          header="Miscible Displacement"
-          content="Bachelor collection"
-          location="2016 - Antwerp, Belgium"
-        />
-        <video
-          className="video"
-          src={miscibleVideo}
-          type="video/mp4"
-          autoPlay
-          loop
-          muted
-        />
-      </div>
-      <div className="right">
-        <div className="contact">
-          <p>kartchev@gmail.com</p>
-          <p>@stefankartchev</p>
-          <p>( + 4 9 ) 0176 99 66 66 66</p>
-        </div>
-      </div>
+      <Router>
+
+        <Switch>
+          <Route path="/shop">
+            <div>
+              this is the shop
+            </div>
+          </Route>
+          <Route path="/">
+            <div className="left">
+              <div
+                className="logo"
+                onMouseOver={() => setLogo(logoGradient)}
+                onMouseLeave={() => setLogo(logoGrey)}
+              >
+                <img alt="logo" src={logo}></img>
+              </div>
+              <Link to="/shop">
+                <div className="shop">
+                  SHOP
+                </div>
+              </Link>
+            </div>
+            <div className="middle">
+              <Work
+                video={selective}
+                header="Selective Memory"
+                content="Part of group show « Casting the Runes » curated by Arthur Poujois"
+                location="2021 - London, United Kingdom"
+              />
+              <Work
+                images={[rest, rest1, rest2, rest3, rest4, rest5, rest6]}
+                header="Rest"
+                content="Print design and production development for Michele Rizzo"
+                location="2020 - Rome, Italy"
+              />
+              <Work
+                images={[luxus6, luxus1, luxus2, luxus3, luxus4, luxus5]}
+                header="Luxus für Alle "
+                content="Print design and development for Annemarie Šarić"
+                location="2020 - Antwerp, Belgium"
+              />
+              <Work
+                images={[heels1, heels2, heels3]}
+                header="DYSMORPHIA Heels"
+                content="Design development and production follow up for ROMBAUT"
+                location="2019 - Paris, France"
+              />
+              <Work
+                img={miscible}
+                header="Ambivalence"
+                content="Visuals on holographic display: Sam Rolfes"
+                location="2018 - Antwerp, Belgium"
+              />
+              <Work
+                images={[
+                  ambivalence,
+                  ambivalence1,
+                  ambivalence2,
+                  ambivalence3,
+                  ambivalence4,
+                  ambivalence5,
+                ]}
+                header="Miscible Displacement"
+                content="Bachelor collection"
+                location="2016 - Antwerp, Belgium"
+              />
+              <video
+                className="video"
+                src={miscibleVideo}
+                type="video/mp4"
+                autoPlay
+                loop
+                muted
+              />
+            </div>
+            <div className="right">
+              <div className="contact">
+                <p>kartchev@gmail.com</p>
+                <p>@stefankartchev</p>
+                <p>( + 4 9 ) 0176 99 66 66 66</p>
+              </div>
+            </div>
+          </Route>
+        </Switch>
+
+      </Router>
+
     </div>
   );
 }
