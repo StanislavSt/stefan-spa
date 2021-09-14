@@ -44,7 +44,7 @@ import selective from "./video/selective.mp4";
 import { Work } from "./components/Work";
 
 function App() {
-  const [logo, setLogo] = useState(logoGrey);
+  const [logo, setLogo] = useState(logoGradient);
   const [logoClass, setLogoClass] = useState('logo')
   const [shopClass, setShopClass] = useState('shop-hidden')
 
@@ -132,8 +132,8 @@ function App() {
               <Link to="/contact" className={shopClass}>
                 CONTACT
               </Link>
-              <img onMouseOver={() => setLogo(logoGradient)}
-                onMouseLeave={() => setLogo(logoGrey)} className="logo-img" alt="logo" src={logo}></img>
+              <img onMouseOver={() => setLogo(logoGrey)}
+                onMouseLeave={() => setLogo(logoGradient)} className="logo-img" alt="logo" src={logo}></img>
             </div>
 
             {/* <div className="right">
