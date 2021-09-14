@@ -45,6 +45,13 @@ import { Work } from "./components/Work";
 
 function App() {
   const [logo, setLogo] = useState(logoGrey);
+  const [logoClass, setLogoClass] = useState('logo')
+  const [shopClass, setShopClass] = useState('shop-hidden')
+
+  const logoClick = () => {
+    setLogoClass('logo-left')
+    setShopClass('shop')
+  }
 
   return (
     <div className="App">
@@ -56,21 +63,12 @@ function App() {
               this is the shop
             </div>
           </Route>
-          <Route path="/">
-            <div className="left">
-              <div
-                className="logo"
-                onMouseOver={() => setLogo(logoGradient)}
-                onMouseLeave={() => setLogo(logoGrey)}
-              >
-                <img alt="logo" src={logo}></img>
-              </div>
-              <Link to="/shop">
-                <div className="shop">
-                  SHOP
-                </div>
-              </Link>
+          <Route path="/contact">
+            <div>
+              this is the contact
             </div>
+          </Route>
+          <Route path="/">
             <div className="middle">
               <Work
                 video={selective}
@@ -124,13 +122,31 @@ function App() {
                 muted
               />
             </div>
-            <div className="right">
+            <div
+              className={logoClass}
+              onClick={() => logoClick()}
+            >
+              <Link to="/shop" className={shopClass}>
+                <div >
+                  SHOP
+                </div>
+              </Link>
+              <Link to="/contact" className={shopClass}>
+                <div >
+                  CONTACT
+                </div>
+              </Link>
+              <img onMouseOver={() => setLogo(logoGradient)}
+                onMouseLeave={() => setLogo(logoGrey)} className="logo-img" alt="logo" src={logo}></img>
+            </div>
+
+            {/* <div className="right">
               <div className="contact">
                 <p>kartchev@gmail.com</p>
                 <p>@stefankartchev</p>
                 <p>( + 4 9 ) 0176 99 66 66 66</p>
               </div>
-            </div>
+            </div> */}
           </Route>
         </Switch>
 
