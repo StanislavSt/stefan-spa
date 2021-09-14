@@ -135,14 +135,6 @@ function App() {
               <img onMouseOver={() => setLogo(logoGrey)}
                 onMouseLeave={() => setLogo(logoGradient)} className="logo-img" alt="logo" src={logo}></img>
             </div>
-
-            {/* <div className="right">
-              <div className="contact">
-                <p>kartchev@gmail.com</p>
-                <p>@stefankartchev</p>
-                <p>( + 4 9 ) 0176 99 66 66 66</p>
-              </div>
-            </div> */}
           </Route>
         </Switch>
 
