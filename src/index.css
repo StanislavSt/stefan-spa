@@ -25,6 +25,7 @@ img {
   opacity: 1;
   transition: opacity 1s;
   transition-delay: 1s;
+  display: block;
 }
 .shop-hidden {
   opacity: 0;

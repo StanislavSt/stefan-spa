@@ -127,14 +127,10 @@ function App() {
               onClick={() => logoClick()}
             >
               <Link to="/shop" className={shopClass}>
-                <div >
-                  SHOP
-                </div>
+                SHOP
               </Link>
               <Link to="/contact" className={shopClass}>
-                <div >
-                  CONTACT
-                </div>
+                CONTACT
               </Link>
               <img onMouseOver={() => setLogo(logoGradient)}
                 onMouseLeave={() => setLogo(logoGrey)} className="logo-img" alt="logo" src={logo}></img>
