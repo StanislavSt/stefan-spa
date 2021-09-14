@@ -1,13 +1,20 @@
 // Import Swiper React components
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
+import { tooltipOnHover } from '../tooltipOnHover';
+
 
 export const Work = ({ img, images, header, content, location, video }) => {
 
   const [swiper, setSwiper] = useState(null)
+
+  useEffect(() => {
+    window.addEventListener('mousemove', tooltipOnHover)
+    return () => window.removeEventListener("mousemove", tooltipOnHover);
+  }, []);
 
   return (
     <div className="container">
@@ -35,24 +42,26 @@ export const Work = ({ img, images, header, content, location, video }) => {
           >
             {images.map((i, index) => (
               <SwiperSlide key={index}>
-                <img alt="swiper-img" src={i}></img>
+                <img className="dot" alt="swiper-img" src={i}></img>
+
               </SwiperSlide>
             ))}
           </Swiper>{" "}
         </div>
       ) : null
       }
-      <div className="topright">
+      <div className="content">
         <div className="header" style={{ textAlign: "right" }}>
           {header}
         </div>
-        <div className="content" style={{ textAlign: "right" }}>
+        <div className="contentt" style={{ textAlign: "right" }}>
           {content}
         </div>
-        <div className="content" style={{ textAlign: "right" }}>
+        <div className="contentt" style={{ textAlign: "right" }}>
           {location}
         </div>
       </div>
+
     </div >
   );
 };

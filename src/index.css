@@ -97,7 +97,42 @@ a {
   font-weight: 700;
   font-size: 2.9vh;
 }
-.content {
+.contentt {
   font-family: "Roboto Mono", monospace;
   font-size: 1.5vh;
+}
+
+.tooltip span {
+  display: none;
+}
+.tooltip:hover span {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+}
+/* .dot {
+  margin: 50px;
+} */
+
+.content {
+  font-size: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.05s ease-in;
+  pointer-events: none;
+  z-index: 99999;
+}
+.visible {
+  opacity: 1;
+}
+
+.content h1,
+.content p {
+  margin: 0;
+}
+
+.dot:hover + .content {
+  opacity: 1;
 }
