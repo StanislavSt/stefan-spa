@@ -10,7 +10,6 @@ import {
 import "./App.css";
 import miscibleVideo from "./video/miscible.mp4";
 import miscible from "./images/miscibleBG.jpg";
-import logoGrey from "./images/logo_magenta.png";
 import logoGradient from "./images/logo_magenta.png";
 
 import heels1 from "./images/RR_Rombaut_Heels_1.jpg";
@@ -44,7 +43,6 @@ import selective from "./video/selective.mp4";
 import { Work } from "./components/Work";
 
 function App() {
-  const [logo, setLogo] = useState(logoGradient);
   const [logoClass, setLogoClass] = useState('logo')
   const [shopClass, setShopClass] = useState('shop-hidden')
   const [contactClass, setContactClass] = useState('contact-hidden')
@@ -138,7 +136,7 @@ function App() {
               onClick={() => logoClick()}
             >
               <img onMouseOver={() => { }}
-                onMouseLeave={() => { }} className="logo-img" alt="logo" src={logo}></img>
+                onMouseLeave={() => { }} className="logo-img" alt="logo" src={logoGradient}></img>
               <a className={shopClass} onClick={() => reachClick()}>
                 REACH
               </a>
