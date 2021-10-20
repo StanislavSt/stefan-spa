@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
-import { tooltipOnHover, onScroll, onMouseEnter } from '../tooltipOnHover';
+import { tooltipOnHover, onMouseEnter } from '../tooltipOnHover';
 
 
 export const Work = ({ img, images, header, content, location, video }) => {
@@ -17,12 +17,13 @@ export const Work = ({ img, images, header, content, location, video }) => {
     tooltipOnHover(e)
   }
 
-  const clearEvents = () => {
-    window.removeEventListener("mousemove", onMouseMove)
-    // window.removeEventListener('wheel', onScrollMove)
-  }
+
 
   useEffect(() => {
+    const clearEvents = () => {
+      window.removeEventListener("mousemove", onMouseMove)
+      // window.removeEventListener('wheel', onScrollMove)
+    }
     window.addEventListener('mousemove', onMouseMove)
     // window.addEventListener('wheel', onScrollMove)
 

@@ -137,9 +137,9 @@ function App() {
             >
               <img onMouseOver={() => { }}
                 onMouseLeave={() => { }} className="logo-img" alt="logo" src={logoGradient}></img>
-              <a className={shopClass} onClick={() => reachClick()}>
+              <span className={shopClass} onClick={() => reachClick()}>
                 REACH
-              </a>
+              </span>
               <Link to="/shop" className={shopClass}>
                 ACQUIRE
               </Link>
