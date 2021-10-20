@@ -17,10 +17,6 @@ export const Work = ({ img, images, header, content, location, video }) => {
     tooltipOnHover(e)
   }
 
-  // const onScrollMove = (e) => {
-  //   onScroll(e)
-  // }
-
   const clearEvents = () => {
     window.removeEventListener("mousemove", onMouseMove)
     // window.removeEventListener('wheel', onScrollMove)
@@ -36,34 +32,20 @@ export const Work = ({ img, images, header, content, location, video }) => {
   return (
     <div className="container" onMouseOver={(e) => onMouseEnter(e)}>
       {video ? (
-        <>
-          <video
-            className="video dot"
-            src={video}
-            type="video/mp4"
-            autoPlay
-            loop
-            muted
-          />
-          <div className="content">
-            <div className="header" style={{ textAlign: "right" }}>
-              {header}
-            </div>
-            <div className="contentt" style={{ textAlign: "right" }}>
-              {content}
-            </div>
-            <div className="contentt" style={{ textAlign: "right" }}>
-              {location}
-            </div>
-          </div>
-        </>
+        <video
+          className="video dot"
+          src={video}
+          type="video/mp4"
+          autoPlay
+          loop
+          muted
+        />
       ) : null}
       {img ? <img alt="miscible" src={img}></img> : null}
       {images ? (
         <div className="swip-container">
           <Swiper
             onInit={(e) => setSwiper(e)}
-            spaceBetween={50}
             slidesPerView={1}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
@@ -81,13 +63,13 @@ export const Work = ({ img, images, header, content, location, video }) => {
       ) : null
       }
       <div className="content">
-        <div className="header" style={{ textAlign: "right" }}>
+        <div className="header" style={{ textAlign: "left" }}>
           {header}
         </div>
-        <div className="contentt" style={{ textAlign: "right" }}>
+        <div className="contentt" style={{ textAlign: "left" }}>
           {content}
         </div>
-        <div className="contentt" style={{ textAlign: "right" }}>
+        <div className="contentt" style={{ textAlign: "left" }}>
           {location}
         </div>
       </div>

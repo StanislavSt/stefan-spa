@@ -4,10 +4,14 @@ var tipDist = 55
 
 
 export const tooltipOnHover = (e) => {
-    if (e.target.classList.contains("dot")) {
+    if (e.target.classList && e.target.classList.contains("dot")) {
         //	Content of dot which is hovered
         $target = e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling
+        console.log(e.target)
 
+        if (!$target.classList.contains("content")) {
+            $target = e.target.nextElementSibling
+        }
         //	Only work with hovered target
         //	Add visible class hovered elem to distinguish
         if ($target) {
@@ -30,7 +34,7 @@ export const tooltipOnHover = (e) => {
 };
 
 export const onMouseEnter = (e) => {
-    if (e.target.classList.contains("dot")) {
+    if (e.target.classList && e.target.classList.contains("dot")) {
         $target = e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling
         if ($target) {
             if (!$target.classList.contains("visible")) {

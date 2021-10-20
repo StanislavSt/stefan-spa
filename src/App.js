@@ -10,8 +10,8 @@ import {
 import "./App.css";
 import miscibleVideo from "./video/miscible.mp4";
 import miscible from "./images/miscibleBG.jpg";
-import logoGrey from "./images/logo_grey.png";
-import logoGradient from "./images/logo_gradient1.png";
+import logoGrey from "./images/logo_magenta.png";
+import logoGradient from "./images/logo_magenta.png";
 
 import heels1 from "./images/RR_Rombaut_Heels_1.jpg";
 import heels2 from "./images/RR_Rombaut_Heels_3.jpg";
@@ -47,12 +47,23 @@ function App() {
   const [logo, setLogo] = useState(logoGradient);
   const [logoClass, setLogoClass] = useState('logo')
   const [shopClass, setShopClass] = useState('shop-hidden')
+  const [contactClass, setContactClass] = useState('contact-hidden')
 
   const logoClick = () => {
-    setLogoClass('logo-left')
-    setShopClass('shop')
+    // setLogoClass('logo-left')
+    if (contactClass === 'contact-form') {
+      setContactClass('contact-hidden')
+      setLogoClass('logo')
+    }
+    if (shopClass === 'shop-hidden')
+      setShopClass('shop')
+    else setShopClass('shop-hidden')
   }
 
+  const reachClick = () => {
+    setContactClass('contact-form')
+    setLogoClass('logo-contact')
+  }
   return (
     <div className="App">
       <Router>
@@ -126,14 +137,23 @@ function App() {
               className={logoClass}
               onClick={() => logoClick()}
             >
+              <img onMouseOver={() => { }}
+                onMouseLeave={() => { }} className="logo-img" alt="logo" src={logo}></img>
+              <a className={shopClass} onClick={() => reachClick()}>
+                REACH
+              </a>
               <Link to="/shop" className={shopClass}>
-                SHOP
+                ACQUIRE
               </Link>
               <Link to="/contact" className={shopClass}>
-                CONTACT
+                SNEAK
               </Link>
-              <img onMouseOver={() => setLogo(logoGrey)}
-                onMouseLeave={() => setLogo(logoGradient)} className="logo-img" alt="logo" src={logo}></img>
+              <div className={contactClass}>
+                <input className="input" placeholder="NAME:" />
+                <input className="input" placeholder="EMAIL:" />
+                <textarea className="textarea" placeholder="QUESTION:" />
+                <button className="submit">SUBMIT</button>
+              </div>
             </div>
           </Route>
         </Switch>
