@@ -22,7 +22,7 @@ img {
   font-weight: 700;
   font-size: 2.3vh;
   text-align: left;
-  margin: 15px;
+  margin: 15px -5px;
   cursor: pointer;
   opacity: 1;
   transition: opacity 1s;
@@ -31,6 +31,7 @@ img {
 }
 
 .shop-hidden {
+  margin-top: -20px;
   opacity: 0;
   pointer-events: none;
 }
