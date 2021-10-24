@@ -16,7 +16,7 @@ img {
   width: 100%;
 }
 .shop {
-  color: #2be51b;
+  color: #FB00E8;
   font-family: "Orbitron", sans-serif;
   font-style: italic;
   font-weight: 700;
@@ -49,7 +49,7 @@ a {
   width: 100%;
 }
 .logo-img {
-  width: 29vh;
+  width: 20vw;
   cursor: pointer;
   align-self: flex-end;
 }
@@ -63,7 +63,7 @@ a {
   transition: all 1s linear;
 }
 .logo-contact {
-  width: 75%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -125,7 +125,7 @@ video {
 } */
 
 .content {
-  color: #2be51b;
+  color: #FB00E8;
   font-size: 20px;
   position: absolute;
   top: 0px;
@@ -149,6 +149,10 @@ video {
 }
 
 .contact-form {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 20.3vw;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -160,18 +164,18 @@ video {
 .input {
   background-color: transparent;
   font-size: 2.8vh;
-  width: 60vw;
+  width: 100%;
   margin-bottom: 10px;
-  border: 5px solid #2be51b;
-  color: #2be51b;
+  border: 2px solid #FB00E8;
+  color: #FB00E8;
 }
 .textarea {
   background-color: transparent;
   font-size: 2.8vh;
-  width: 60vw;
+  width: 100%;
   height: 40vh;
-  border: 5px solid #2be51b;
-  color: #2be51b;
+  border: 2px solid #FB00E8;
+  color: #FB00E8;
   margin-bottom: 10px;
 }
 ::-moz-placeholder {
@@ -185,6 +189,6 @@ textarea {
   background-color: transparent;
   font-size: 2.8vh;
   width: 20%;
-  border: 5px solid #2be51b;
-  color: #2be51b;
+  border: 2px solid #FB00E8;
+  color: #FB00E8;
 }
