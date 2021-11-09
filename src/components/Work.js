@@ -7,7 +7,7 @@ import "swiper/swiper-bundle.css";
 import { tooltipOnHover, onMouseEnter } from '../tooltipOnHover';
 
 
-export const Work = ({ img, images, header, content, location, video }) => {
+export const Work = ({ img, images, header, content, location, credits, video }) => {
 
   const [swiper, setSwiper] = useState(null)
   const clientY = useRef(null)
@@ -44,12 +44,6 @@ export const Work = ({ img, images, header, content, location, video }) => {
             onClick={() => swiper.slideNext()}
             loop
           >
-            {images.map((i, index) => (
-              <SwiperSlide key={index}>
-                <img className="dot" alt="swiper-img" src={i}></img>
-
-              </SwiperSlide>
-            ))}
             {video ? (
               <SwiperSlide key={1234}>
                 <video
@@ -62,6 +56,13 @@ export const Work = ({ img, images, header, content, location, video }) => {
                 />
               </SwiperSlide>
             ) : null}
+            {images.map((i, index) => (
+              <SwiperSlide key={index}>
+                <img className="dot" alt="swiper-img" src={i}></img>
+
+              </SwiperSlide>
+            ))}
+
           </Swiper>{" "}
         </div>
       ) : null
@@ -75,6 +76,9 @@ export const Work = ({ img, images, header, content, location, video }) => {
         </div>
         <div className="contentt" style={{ textAlign: "left" }}>
           {location}
+        </div>
+        <div className="contentt" style={{ textAlign: "left" }}>
+          {credits}
         </div>
       </div>
 

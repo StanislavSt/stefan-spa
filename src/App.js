@@ -117,8 +117,12 @@ function App() {
                 <Work
                   images={[rest, rest1, rest2, rest3, rest4, rest5, rest6]}
                   header="Rest"
-                  content="Print design and production development for Michele Rizzo"
+                  content="Print design and production development for Michele Rizzo
+                  Sculptural and performative installation; in the pictures: resin, aluminium, brass, printed cotton.
+                  Courtesy: the artist, Fondazione Sandretto Re Rebaudengo, Quandriennale d’Arte di Roma.
+                  "
                   location="2020 - Rome, Italy"
+                  credits="Photo credits: Cristian Cocurullo"
                 />
               </LazyLoadComponent>
 
@@ -126,8 +130,10 @@ function App() {
                 <Work
                   images={[luxus6, luxus1, luxus2, luxus3, luxus4, luxus5]}
                   header="Luxus für Alle "
-                  content="Print design and development for Annemarie Šarić"
+                  content="Print design and development for Annemarie Šarić. MoMu Award winner"
                   location="2020 - Antwerp, Belgium"
+                  credits="Photo credits: Lee Wei"
+
                 />
               </LazyLoadComponent>
 
@@ -135,7 +141,7 @@ function App() {
                 <Work
                   images={[heels1, heels2, heels3]}
                   header="DYSMORPHIA Heels"
-                  content="Design development and production follow up for ROMBAUT"
+                  content="Diploma collection. Design development and production follow up for ROMBAUT"
                   location="2019 - Paris, France"
                 />
               </LazyLoadComponent>
@@ -153,6 +159,7 @@ function App() {
                   header="Ambivalence"
                   content="Visuals on holographic display: Sam Rolfes"
                   location="2018 - Antwerp, Belgium"
+                  credits="Photo credits: Zlatimir Arakliev (photoshoot pics),  Etienne Todoir - Catwalkpictures (show pics) "
                 />
               </LazyLoadComponent>
               <LazyLoadComponent>
@@ -162,7 +169,7 @@ function App() {
                   header="Miscible Displacement"
                   content="Bachelor collection"
                   location="2016 - Antwerp, Belgium"
-
+                  credits="Photo credits: Kiko"
                 />
               </LazyLoadComponent>
             </div>
