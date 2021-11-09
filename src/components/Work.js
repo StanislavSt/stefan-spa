@@ -48,8 +48,8 @@ export const Work = ({ img, images, header, content, location, video }) => {
           <Swiper
             onInit={(e) => setSwiper(e)}
             slidesPerView={1}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => { }}
+            onSlideChange={() => { }}
             onClick={() => swiper.slideNext()}
             loop
           >

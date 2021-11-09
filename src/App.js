@@ -38,9 +38,16 @@ import ambivalence3 from "./images/ambivalence03.jpg";
 import ambivalence4 from "./images/ambivalence04.jpg";
 import ambivalence5 from "./images/ambivalence05.jpg";
 
-import selective from "./video/selective.mp4";
+// import selective from "./video/selective.mp4";
 
 import { Work } from "./components/Work";
+
+
+// import ProductData from './components/ProductData'
+// import { Product } from './components/Product'
+import MyShop from './components/MyShop'
+
+import { Helmet } from "react-helmet";
 
 function App() {
   const [logoClass, setLogoClass] = useState('logo')
@@ -61,15 +68,27 @@ function App() {
   const reachClick = () => {
     setContactClass('contact-form')
     setLogoClass('logo-contact')
+    setShopClass('shop-hidden')
   }
   return (
     <div className="App">
+      <Helmet>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NTUwM2YyNDgtZTFhOC00OTRmLWEwZjctOTBlMDc0MWI4YjBlNjM3MDQ3NzY4MzQxMDc0MTUy"></script>
+
+        <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+
+
+      </Helmet>
       <Router>
 
         <Switch>
           <Route path="/shop">
             <div>
-              this is the shop
+              <MyShop />
             </div>
           </Route>
           <Route path="/contact">
@@ -79,12 +98,12 @@ function App() {
           </Route>
           <Route path="/">
             <div className="middle">
-              <Work
+              {/* <Work
                 video={selective}
                 header="Selective Memory"
                 content="Part of group show « Casting the Runes » curated by Arthur Poujois"
                 location="2021 - London, United Kingdom"
-              />
+              /> */}
               <Work
                 images={[rest, rest1, rest2, rest3, rest4, rest5, rest6]}
                 header="Rest"
@@ -133,9 +152,9 @@ function App() {
             </div>
             <div
               className={logoClass}
-              onClick={() => logoClick()}
             >
-              <img onMouseOver={() => { }}
+              <img
+                onClick={() => logoClick()}
                 onMouseLeave={() => { }} className="logo-img" alt="logo" src={logoGradient}></img>
               <span className={shopClass} onClick={() => reachClick()}>
                 REACH
