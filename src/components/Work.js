@@ -32,16 +32,7 @@ export const Work = ({ img, images, header, content, location, video }) => {
 
   return (
     <div className="container" onMouseOver={(e) => onMouseEnter(e)}>
-      {video ? (
-        <video
-          className="video dot"
-          src={video}
-          type="video/mp4"
-          autoPlay
-          loop
-          muted
-        />
-      ) : null}
+
       {img ? <img alt="miscible" src={img}></img> : null}
       {images ? (
         <div className="swip-container">
@@ -59,6 +50,18 @@ export const Work = ({ img, images, header, content, location, video }) => {
 
               </SwiperSlide>
             ))}
+            {video ? (
+              <SwiperSlide key={1234}>
+                <video
+                  className="video dot"
+                  src={video}
+                  type="video/mp4"
+                  autoPlay
+                  loop
+                  muted
+                />
+              </SwiperSlide>
+            ) : null}
           </Swiper>{" "}
         </div>
       ) : null

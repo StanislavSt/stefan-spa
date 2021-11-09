@@ -12,6 +12,10 @@ import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import "./App.css";
 import miscibleVideo from "./video/miscible.mp4";
 import miscible from "./images/miscibleBG.jpg";
+import miscible1 from "./images/miscibledisplacement01.jpg";
+import miscible2 from "./images/miscibledisplacement02.jpg";
+import miscible3 from "./images/miscibledisplacement03.jpg";
+
 import logoGradient from "./images/logo_magenta.png";
 
 import heels1 from "./images/RR_Rombaut_Heels_1.jpg";
@@ -39,6 +43,8 @@ import ambivalence2 from "./images/ambivalence02.jpg";
 import ambivalence3 from "./images/ambivalence03.jpg";
 import ambivalence4 from "./images/ambivalence04.jpg";
 import ambivalence5 from "./images/ambivalence05.jpg";
+import ambivalence6 from "./images/ambivalence06.jpg";
+
 
 // import selective from "./video/selective.mp4";
 
@@ -133,16 +139,6 @@ function App() {
                   location="2019 - Paris, France"
                 />
               </LazyLoadComponent>
-
-              <LazyLoadComponent>
-                <Work
-                  img={miscible}
-                  header="Ambivalence"
-                  content="Visuals on holographic display: Sam Rolfes"
-                  location="2018 - Antwerp, Belgium"
-                />
-              </LazyLoadComponent>
-
               <LazyLoadComponent>
                 <Work
                   images={[
@@ -152,21 +148,23 @@ function App() {
                     ambivalence3,
                     ambivalence4,
                     ambivalence5,
+                    ambivalence6
                   ]}
+                  header="Ambivalence"
+                  content="Visuals on holographic display: Sam Rolfes"
+                  location="2018 - Antwerp, Belgium"
+                />
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Work
+                  images={[miscible, miscible1, miscible2, miscible3]}
+                  video={miscibleVideo}
                   header="Miscible Displacement"
                   content="Bachelor collection"
                   location="2016 - Antwerp, Belgium"
+
                 />
               </LazyLoadComponent>
-
-              <video
-                className="video"
-                src={miscibleVideo}
-                type="video/mp4"
-                autoPlay
-                loop
-                muted
-              />
             </div>
             <div
               className={logoClass}
