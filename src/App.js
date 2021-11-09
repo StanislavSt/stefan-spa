@@ -7,6 +7,8 @@ import {
   Link
 } from "react-router-dom";
 
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+
 import "./App.css";
 import miscibleVideo from "./video/miscible.mp4";
 import miscible from "./images/miscibleBG.jpg";
@@ -98,49 +100,65 @@ function App() {
           </Route>
           <Route path="/">
             <div className="middle">
-              {/* <Work
+              {/* <LazyLoadComponent>
+<Work
                 video={selective}
                 header="Selective Memory"
                 content="Part of group show « Casting the Runes » curated by Arthur Poujois"
                 location="2021 - London, United Kingdom"
               /> */}
-              <Work
-                images={[rest, rest1, rest2, rest3, rest4, rest5, rest6]}
-                header="Rest"
-                content="Print design and production development for Michele Rizzo"
-                location="2020 - Rome, Italy"
-              />
-              <Work
-                images={[luxus6, luxus1, luxus2, luxus3, luxus4, luxus5]}
-                header="Luxus für Alle "
-                content="Print design and development for Annemarie Šarić"
-                location="2020 - Antwerp, Belgium"
-              />
-              <Work
-                images={[heels1, heels2, heels3]}
-                header="DYSMORPHIA Heels"
-                content="Design development and production follow up for ROMBAUT"
-                location="2019 - Paris, France"
-              />
-              <Work
-                img={miscible}
-                header="Ambivalence"
-                content="Visuals on holographic display: Sam Rolfes"
-                location="2018 - Antwerp, Belgium"
-              />
-              <Work
-                images={[
-                  ambivalence,
-                  ambivalence1,
-                  ambivalence2,
-                  ambivalence3,
-                  ambivalence4,
-                  ambivalence5,
-                ]}
-                header="Miscible Displacement"
-                content="Bachelor collection"
-                location="2016 - Antwerp, Belgium"
-              />
+              <LazyLoadComponent>
+                <Work
+                  images={[rest, rest1, rest2, rest3, rest4, rest5, rest6]}
+                  header="Rest"
+                  content="Print design and production development for Michele Rizzo"
+                  location="2020 - Rome, Italy"
+                />
+              </LazyLoadComponent>
+
+              <LazyLoadComponent>
+                <Work
+                  images={[luxus6, luxus1, luxus2, luxus3, luxus4, luxus5]}
+                  header="Luxus für Alle "
+                  content="Print design and development for Annemarie Šarić"
+                  location="2020 - Antwerp, Belgium"
+                />
+              </LazyLoadComponent>
+
+              <LazyLoadComponent>
+                <Work
+                  images={[heels1, heels2, heels3]}
+                  header="DYSMORPHIA Heels"
+                  content="Design development and production follow up for ROMBAUT"
+                  location="2019 - Paris, France"
+                />
+              </LazyLoadComponent>
+
+              <LazyLoadComponent>
+                <Work
+                  img={miscible}
+                  header="Ambivalence"
+                  content="Visuals on holographic display: Sam Rolfes"
+                  location="2018 - Antwerp, Belgium"
+                />
+              </LazyLoadComponent>
+
+              <LazyLoadComponent>
+                <Work
+                  images={[
+                    ambivalence,
+                    ambivalence1,
+                    ambivalence2,
+                    ambivalence3,
+                    ambivalence4,
+                    ambivalence5,
+                  ]}
+                  header="Miscible Displacement"
+                  content="Bachelor collection"
+                  location="2016 - Antwerp, Belgium"
+                />
+              </LazyLoadComponent>
+
               <video
                 className="video"
                 src={miscibleVideo}
