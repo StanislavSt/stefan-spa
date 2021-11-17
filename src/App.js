@@ -141,7 +141,7 @@ function App() {
                 <Work
                   images={[heels1, heels2, heels3]}
                   header="DYSMORPHIA Heels"
-                  content="Diploma collection. Design development and production follow up for ROMBAUT"
+                  content="Design development and production follow up for ROMBAUT"
                   location="2019 - Paris, France"
                 />
               </LazyLoadComponent>
@@ -189,10 +189,12 @@ function App() {
                 SNEAK
               </Link>
               <div className={contactClass}>
-                <input className="input" placeholder="NAME:" />
-                <input className="input" placeholder="EMAIL:" />
-                <textarea className="textarea" placeholder="QUESTION:" />
-                <button className="submit">SUBMIT</button>
+                <form name="contact" method="POST" data-netlify="true">
+                  <input className="input" placeholder="NAME:" type="text" />
+                  <input className="input" placeholder="EMAIL:" type="email" />
+                  <textarea className="textarea" placeholder="QUESTION:" />
+                  <button className="submit" type="submit">SUBMIT</button>
+                </form>
               </div>
             </div>
           </Route>
