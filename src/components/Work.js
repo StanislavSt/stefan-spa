@@ -32,7 +32,20 @@ export const Work = ({ img, images, header, content, location, credits, video })
 
   return (
     <div className="container" onMouseOver={(e) => onMouseEnter(e)}>
-
+      <div className="content-small">
+        <div className="header" style={{ textAlign: "left" }}>
+          {header}
+        </div>
+        <div style={{ textAlign: "left" }}>
+          {content}
+        </div>
+        <div style={{ textAlign: "left" }}>
+          {location}
+        </div>
+        <div style={{ textAlign: "left" }}>
+          {credits}
+        </div>
+      </div>
       {img ? <img alt="miscible" src={img}></img> : null}
       {images ? (
         <div className="swip-container">
@@ -67,7 +80,7 @@ export const Work = ({ img, images, header, content, location, credits, video })
         </div>
       ) : null
       }
-      <div className="content">
+      <div className="content-large">
         <div className="header" style={{ textAlign: "left" }}>
           {header}
         </div>
@@ -81,6 +94,7 @@ export const Work = ({ img, images, header, content, location, credits, video })
           {credits}
         </div>
       </div>
+
 
     </div >
   );

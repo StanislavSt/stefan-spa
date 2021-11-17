@@ -8,7 +8,7 @@ export const tooltipOnHover = (e) => {
         //	Content of dot which is hovered
         $target = e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling
 
-        if (!$target.classList.contains("content")) {
+        if (!$target.classList.contains("content-large")) {
             $target = e.target.nextElementSibling
         }
         //	Only work with hovered target
@@ -62,7 +62,7 @@ export const onMouseEnter = (e) => {
 //     // }
 // }
 const clearTooltips = () => {
-    var content = document.getElementsByClassName("content");
+    var content = document.getElementsByClassName("content-large");
     for (var i = 0; i < content.length; i++) {
         content[i].classList.remove("visible");
     }
