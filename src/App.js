@@ -85,9 +85,10 @@ function App() {
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NTUwM2YyNDgtZTFhOC00OTRmLWEwZjctOTBlMDc0MWI4YjBlNjM3MDQ3NzY4MzQxMDc0MTUy"></script>
+        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MzUzOGNlMTktYTQ2NC00YWEyLWE3MzAtMjQ0OTFjMmY2OTQ5NjM3NzE3MjM1MjY4MDIzNTc5"></script>
 
         <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+
 
 
       </Helmet>

@@ -194,6 +194,14 @@ textarea {
   color: #fb00e8;
 }
 
+
+
+.big-image{
+  width:100%;
+}
+.big-image video{
+  width: 100vw;
+}
 @media only screen and (max-width: 1100px) {
   .content-large {
     display: none;
