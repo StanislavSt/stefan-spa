@@ -194,7 +194,7 @@ function App() {
                   <input type="hidden" name="form-name" value="contact" />
                   <input className="input" placeholder="NAME:" type="text" />
                   <input className="input" placeholder="EMAIL:" type="email" />
-                  <textarea className="textarea" placeholder="QUESTION:" />
+                  <textarea className="textarea" placeholder="QUESTION:" name="message" />
                   <button className="submit" type="submit">SUBMIT</button>
                 </form>
               </div>
