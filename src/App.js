@@ -81,16 +81,10 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-
-
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MzUzOGNlMTktYTQ2NC00YWEyLWE3MzAtMjQ0OTFjMmY2OTQ5NjM3NzE3MjM1MjY4MDIzNTc5"></script>
-
-        <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
-
-
-
+        <link rel="preconnect" href="https://app.snipcart.com" />
+        <link rel="preconnect" href="https://cdn.snipcart.com" />
+        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+        <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
       </Helmet>
       <Router>
 
@@ -190,13 +184,21 @@ function App() {
                 SNEAK
               </Link>
               <div className={contactClass}>
+                <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+                  <input type="text" name="name" />
+                  <input type="email" name="email" />
+                  <textarea name="message"></textarea>
+                </form>
+
                 <form name="contact" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact" />
                   <input className="input" placeholder="NAME:" type="text" />
                   <input className="input" placeholder="EMAIL:" type="email" />
                   <textarea className="textarea" placeholder="QUESTION:" />
                   <button className="submit" type="submit">SUBMIT</button>
                 </form>
               </div>
+
             </div>
           </Route>
         </Switch>
