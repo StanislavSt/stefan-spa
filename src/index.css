@@ -201,17 +201,8 @@ textarea {
 }
 .big-image video{
   width: 100vw;
-  max-height: 80vh;
 }
 
-
-.snipcart-item-line--cart-edit .snipcart-item-line__image{
-  height:50px !important;
-  max-width: none !important;
-}
-.snipcart-item-line__image{
-  max-height:none !important ;
-}
 @media only screen and (max-width: 1100px) {
   .content-large {
     display: none;
