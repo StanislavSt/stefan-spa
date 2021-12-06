@@ -28,6 +28,9 @@ export default function MyShop() {
           <source src={videoItem} />
         </video>
       </div>
+      <div className="products-container">
+
+      </div>
       {products.map((product) => (
         <Product pp={product} id={product.id} />
       ))}

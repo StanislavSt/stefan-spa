@@ -10,9 +10,9 @@ export const Product = ({ pp, id }) => {
     setSelected(e.target.textContent);
     setShowDropdown(false);
   };
-  const secret = process.env.REACT_APP_SNIPCART_API;
 
   useEffect(() => {
+    const secret = process.env.REACT_APP_SNIPCART_API;
     const getProducts = async () => {
       const request = await fetch(
         `https://app.snipcart.com/api/products/${id}`,
@@ -27,7 +27,7 @@ export const Product = ({ pp, id }) => {
       setProducts(result);
     };
     getProducts();
-  }, []);
+  }, [id]);
   return (
     <div key={pp.id}>
       <div className="product-container">
@@ -75,7 +75,7 @@ export const Product = ({ pp, id }) => {
           <p>
             <button
               className={
-                selected == "Size"
+                selected === "Size"
                   ? "snipcart-add-item selectSize"
                   : "snipcart-add-item"
               }
