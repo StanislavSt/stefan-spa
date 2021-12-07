@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { LazyLoadComponent } from "react-lazy-load-image-component";
+import { Shake } from "reshake";
 
 import "./App.css";
 import miscibleVideo from "./video/miscible.mp4";
@@ -40,7 +41,8 @@ import ambivalence4 from "./images/ambivalence04.jpg";
 import ambivalence5 from "./images/ambivalence05.jpg";
 import ambivalence6 from "./images/ambivalence06.jpg";
 
-// import selective from "./video/selective.mp4";
+import selective from "./video/selective_memory_in_motion02.webm";
+import selective2 from "./images/selective_memory.jpg";
 
 import { Work } from "./components/Work";
 
@@ -53,6 +55,7 @@ function App() {
   const [logoClass, setLogoClass] = useState("logo");
   const [shopClass, setShopClass] = useState("shop-hidden");
   const [contactClass, setContactClass] = useState("contact-hidden");
+  const [shakeActive, setShakeActive] = useState(false);
 
   const logoClick = () => {
     if (contactClass === "contact-form") {
@@ -68,6 +71,16 @@ function App() {
     setLogoClass("logo-contact");
     setShopClass("shop-hidden");
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShakeActive(true);
+      setTimeout(() => {
+        setShakeActive(false);
+      }, 1000);
+    }, 10000);
+    return () => clearInterval(interval);
+  });
   return (
     <div className="App">
       <Helmet>
@@ -94,13 +107,15 @@ function App() {
           </Route>
           <Route path="/">
             <div className="middle">
-              {/* <LazyLoadComponent>
-<Work
-                video={selective}
-                header="Selective Memory"
-                content="Part of group show « Casting the Runes » curated by Arthur Poujois"
-                location="2021 - London, United Kingdom"
-              /> */}
+              <LazyLoadComponent>
+                <Work
+                  images={[selective2]}
+                  video={selective}
+                  header="Selective Memory"
+                  content="Part of group show « Casting the Runes » curated by Arthur Poujois"
+                  location="2021 - London, United Kingdom"
+                />
+              </LazyLoadComponent>
               <LazyLoadComponent>
                 <Work
                   images={[rest, rest1, rest2, rest3, rest4, rest5, rest6]}
@@ -160,42 +175,51 @@ function App() {
                 />
               </LazyLoadComponent>
             </div>
+
             <div className={logoClass}>
-              <img
-                onClick={() => logoClick()}
-                onMouseLeave={() => {}}
-                className="logo-img"
-                alt="logo"
-                src={logoGradient}
-              ></img>
+              <Shake
+                h={5}
+                v={5}
+                r={20}
+                dur={300}
+                int={10}
+                max={100}
+                fixed={true}
+                fixedStop={false}
+                freez={false}
+                active={shakeActive}
+                style={{ alignSelf: "flex-end" }}
+              >
+                <img
+                  onClick={() => logoClick()}
+                  onMouseLeave={() => {}}
+                  className="logo-img"
+                  alt="logo"
+                  src={logoGradient}
+                ></img>
+              </Shake>
+
               <span className={shopClass} onClick={() => reachClick()}>
                 REACH
               </span>
               <Link to="/shop" className={shopClass}>
                 ACQUIRE
               </Link>
-              <Link to="/contact" className={shopClass}>
-                SNEAK
-              </Link>
-                <div className={contactClass}>
-                  <form name="contact" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input className="input" placeholder="NAME:" type="text" />
-                    <input
-                      className="input"
-                      placeholder="EMAIL:"
-                      type="email"
-                    />
-                    <textarea
-                      className="textarea"
-                      placeholder="QUESTION:"
-                      name="message"
-                    />
-                    <button className="submit" type="submit">
-                      SUBMIT
-                    </button>
-                  </form>
-                </div>
+              <div className={contactClass}>
+                <form name="contact" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input className="input" placeholder="NAME:" type="text" />
+                  <input className="input" placeholder="EMAIL:" type="email" />
+                  <textarea
+                    className="textarea"
+                    placeholder="QUESTION:"
+                    name="message"
+                  />
+                  <button className="submit" type="submit">
+                    SUBMIT
+                  </button>
+                </form>
+              </div>
             </div>
           </Route>
         </Switch>

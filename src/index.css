@@ -20,7 +20,7 @@ img {
   font-family: "Orbitron", sans-serif;
   font-style: italic;
   font-weight: 700;
-  font-size: 2.3vh;
+  font-size: 3.3vh;
   text-align: left;
   margin: 15px -5px;
   cursor: pointer;
@@ -29,6 +29,7 @@ img {
   transition-delay: 0.2s;
   display: block;
 }
+
 
 .shop-hidden {
   margin-top: -20px;
@@ -209,6 +210,7 @@ textarea {
 
 .big-image {
   width: 100%;
+  position: relative;
 }
 .big-image video {
   width: 100vw;
@@ -297,6 +299,22 @@ textarea {
 .product-container img {
   width:33vw;
 }
+
+
+.video-overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 10px;
+  padding: 5px 5px;
+  font-size: 3vw;
+  color: #fb00e8;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  transform: translate(-50%, -50%)
+}
+
+
 @media only screen and (max-width: 1100px) {
   .content-large {
     display: none;
