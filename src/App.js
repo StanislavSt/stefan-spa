@@ -44,6 +44,10 @@ import ambivalence6 from "./images/ambivalence06.jpg";
 import selective from "./video/selective_memory_in_motion02.webm";
 import selective2 from "./images/selective_memory.jpg";
 
+import fear1 from './images/fear_foliage1.jpg'
+import fear2 from './images/fear_foliage2.jpg'
+import fear3 from './images/fear_foliage3.jpg'
+
 import { Work } from "./components/Work";
 
 // import { Product } from './components/Product'
@@ -114,6 +118,15 @@ function App() {
                   header="Selective Memory"
                   content="Part of group show « Casting the Runes » curated by Arthur Poujois"
                   location="2021 - London, United Kingdom"
+                />
+              </LazyLoadComponent>
+              <LazyLoadComponent>
+                <Work
+                  images={[fear1,fear2,fear3]}
+                  header="Fear the foliage"
+                  content="Print Design and Development for Digital Fashion Film for Digital Village"
+                  location="2020 - Metaverse"
+                  credits="Credits: Shayli Harrison"
                 />
               </LazyLoadComponent>
               <LazyLoadComponent>
