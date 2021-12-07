@@ -1,4 +1,5 @@
 import videoItem from "../video/karthecv-campaign.webm";
+import { useRef } from "react";
 import { Product } from "./Product";
 import products from "../products.json";
 import { useState } from "react/cjs/react.development";
