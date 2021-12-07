@@ -149,6 +149,7 @@ video {
 }
 
 .contact-form {
+
   box-sizing: border-box;
   width: 100%;
   padding-right: 20.3vw;
@@ -162,6 +163,10 @@ video {
   height: 1px;
 }
 .input {
+  font-family: "Orbitron", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4.1vh;
   background-color: transparent;
   font-size: 2.8vh;
   width: 100%;
@@ -170,6 +175,10 @@ video {
   color: #fb00e8;
 }
 .textarea {
+  font-family: "Orbitron", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4.1vh;
   background-color: transparent;
   font-size: 2.8vh;
   width: 100%;
@@ -186,6 +195,10 @@ textarea {
   outline: none;
 }
 .submit {
+  font-family: "Orbitron", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4.1vh;
   background-color: transparent;
   font-size: 2.8vh;
   width: 20%;
@@ -275,6 +288,14 @@ textarea {
 }
 .selectSize {
   pointer-events: none;
+}
+
+.products-container {
+  display: flex;
+  justify-content: space-between;
+}
+.product-container img {
+  width:33vw;
 }
 @media only screen and (max-width: 1100px) {
   .content-large {

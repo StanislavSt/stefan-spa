@@ -29,11 +29,10 @@ export default function MyShop() {
         </video>
       </div>
       <div className="products-container">
-
-      </div>
       {products.map((product) => (
         <Product pp={product} id={product.id} />
       ))}
+      </div>
     </div>
   );
 }

@@ -29,7 +29,7 @@ export const Product = ({ pp, id }) => {
     getProducts();
   }, [id]);
   return (
-    <div key={pp.id}>
+    <div key={pp.id} style={{ width: "50%" }}>
       <div className="product-container">
         <img
           src={pp.image}
