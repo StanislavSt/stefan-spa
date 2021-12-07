@@ -55,7 +55,6 @@ function App() {
   const [contactClass, setContactClass] = useState("contact-hidden");
 
   const logoClick = () => {
-    // setLogoClass('logo-left')
     if (contactClass === "contact-form") {
       setContactClass("contact-hidden");
       setLogoClass("logo");
