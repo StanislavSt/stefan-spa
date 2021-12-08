@@ -1,8 +1,7 @@
 import videoItem from "../video/karthecv-campaign.webm";
-import { useRef } from "react";
+import { useRef,useState} from "react";
 import { Product } from "./Product";
 import products from "../products.json";
-import { useState } from "react/cjs/react.development";
 
 export default function MyShop() {
   const [paused, setPaused] = useState(true);
