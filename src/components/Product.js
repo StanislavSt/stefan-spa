@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 
 import dayFront from '../images/day_front.jpg'
 import dayBack from '../images/day_back.jpg'
-import nightFront from '../images/night_front.jpg'
-import nightBack from '../images/night_back.jpg'
+// import nightFront from '../images/night_front.jpg'
+// import nightBack from '../images/night_back.jpg'
 
 export const Product = ({ pp, id }) => {
   const [showDropdown, setShowDropdown] = useState(false);
