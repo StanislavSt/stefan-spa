@@ -1,10 +1,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
+import dayFront from '../images/day_front.jpg'
+import dayBack from '../images/day_back.jpg'
+import nightFront from '../images/night_front.jpg'
+import nightBack from '../images/night_back.jpg'
+
 export const Product = ({ pp, id }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [products, setProducts] = useState(null);
   const [selected, setSelected] = useState("Size");
+
+  const [backImage,setBackImage] = useState(dayFront)
 
   const handleOnClick = (e) => {
     setSelected(e.target.textContent);
@@ -31,11 +38,14 @@ export const Product = ({ pp, id }) => {
   return (
     <div key={pp.id} style={{ width: "50%" }}>
       <div className="product-container">
-        <img
-          src={pp.image}
-          alt={`Preview of ${pp.title}`}
-          className="product-image"
-        />
+        <div className="image-container" onMouseEnter={() => setBackImage(dayBack)} onMouseLeave={() => setBackImage(dayFront)}>
+          <img
+            src={backImage}
+            alt={`Preview of ${pp.title}`}
+            className="product-image"
+          />
+        </div>
+
         <div className="product-description">
           <h3>{pp.title}</h3>
           <p>{pp.description}</p>

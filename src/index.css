@@ -221,7 +221,7 @@ textarea {
 }
 
 .dropdown-header {
-  border: 2px solid #fb00e8;
+  border: 2px solid white;
   width: 200px;
   height: 40px;
   display: flex;
@@ -230,7 +230,7 @@ textarea {
 }
 .dropdown-list {
   margin-top: 1px;
-  border: 3px solid #fb00e8;
+  border: 3px solid white;
   width: 200px;
 }
 .dropdown-list div:hover {
@@ -243,7 +243,7 @@ textarea {
 .dropdown-container {
   position: relative;
   font-weight: 900;
-  color: #fb00e8;
+  color: white;
   cursor: pointer;
 }
 
@@ -255,7 +255,7 @@ textarea {
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 10px solid #fb00e8;
+  border-top: 10px solid white;
 }
 
 .select-box--arrow-up {
@@ -266,20 +266,20 @@ textarea {
   height: 0;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-bottom: 10px solid #fb00e8;
+  border-bottom: 10px solid white;
 }
 
 .snipcart-add-item {
   background-color: transparent;
-  border: 3px solid #fb00e8;
+  border: 3px solid white;
   width: 150px;
   height: 40px;
-  color: #fb00e8;
+  color: white;
   font-weight: 900;
 }
 
 .snipcart-add-item:hover {
-  background-color: #fb00e8;
+  background-color: white;
   color: black;
   cursor: pointer;
 }
@@ -308,7 +308,7 @@ textarea {
   margin: 10px;
   padding: 5px 5px;
   font-size: 3vw;
-  color: #fb00e8;
+  color: black;
   font-family: "Orbitron", sans-serif;
   font-weight: 900;
   transform: translate(-50%, -50%)

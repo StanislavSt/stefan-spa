@@ -14,9 +14,9 @@ export default function MyShop() {
   };
 
   return (
-    <div>
+    <div style={{background:"#7a7a7a"}}>
       <div className="big-image" style={{ cursor: "pointer" }}>
-        <video ref={vidRef} loop onClick={() => handleOnClick()} playsinline>
+        <video ref={vidRef} loop onClick={() => handleOnClick()} playsinline controls>
           <source src={videoItem} />
         </video>
         {paused ? (
